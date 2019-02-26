@@ -51,6 +51,10 @@ public class HomeServlet extends HttpServlet {
             out.println("</tr>");
             out.println("</table>");
             out.println("<hr/>");
+            out.println("<h3>Sobre o projeto<br></h3>");            
+            out.println("<dd>Projeto utilizando Servelets proposto pelo Professor Ricardo Pupo Larguesa.<br>"
+                    + "Acessando qualquer um dos links, é apresentado um formulário, que após inseir os dados a montante será gerada. </dd>");            
+            out.println("<hr/>");
             out.println("<h3>Integrantes:</h3>");
             out.println("<dl>");
             out.println("<dt><b>Daianne Aguiar</b></dt>");
@@ -67,6 +71,9 @@ public class HomeServlet extends HttpServlet {
             out.println("</dl>");
             out.println("<hr/>");
             out.println("</body>");
+            out.println("<footer>");
+            out.println("<dd> º Programação Orientada a Objeto - POO - ADS - Fatec Praia Grande</dd>");
+            out.println("</footer>");            
             out.println("</html>");
         }
     }

@@ -88,6 +88,19 @@ public class JuroSimplesServlet extends HttpServlet {
                 }
             }
             out.println("</body>");
+            out.println("<hr/>");
+            out.println("<h3>Fórmula aplicada <br><br>"
+                    + "M = C * (1+(i*n))</h3>");            
+            out.println("<dd>Sendo: <br>"
+                    + "C = Capital ; <br>"
+                    + "i = taxa de juros mensal; <br>"
+                    + "n = quantidade de meses.</dd>");
+            out.println("<br/>");
+            out.println("<hr/>");
+            out.println("</body>");
+             out.println("<footer>");
+            out.println("<dd> º Programação Orientada a Objeto - POO - ADS - Fatec Praia Grande</dd>");
+            out.println("</footer>"); 
             out.println("</html>");
         }
     }
