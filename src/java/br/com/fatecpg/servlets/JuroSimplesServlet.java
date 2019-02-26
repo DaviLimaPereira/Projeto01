@@ -46,35 +46,47 @@ public class JuroSimplesServlet extends HttpServlet {
             out.println("<title>Servlet - Juros Simples</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>SERVLETS</h1>");
-            out.println("<h2>Juros Simples</h2>");
+            out.println("<table border='0' style='text-align:center' align='center' cellspacing='10' cellpadding='4'>");
+            out.println("<tr>");
+            out.println("<td colspan='3'><h1>SERVLETS</h1></td>");
+            out.println("</tr>");
+            out.println("<tr>");
+            out.println("<td width='250px'><a href='home.html'><font size='6'>Home</font></a></td>");
+            out.println("<td width='250px'><a href='jurosimples.html'><font size='6'>Juros Simples</font></a></td>");
+            out.println("<td width='250px'><a href='juroscomposto.html'><font size='6'>Juros Composto</font></a></td>");
+            out.println("</tr>");
+            out.println("</table>");
             out.println("<hr/>");
             out.println("<form>");
-            out.println("Digite o valor do Capital Inicial: <input type='text' name='c'>");
-            out.println("Digite o vaor do juros por mês: <input type='text' name='j'>");
-            out.println("Digite a quantidade de meses: <input type='text' name='n'>");
-            out.println("<input type='submit' name='calc' value='ok'/>");
+            out.println("<table border='0' style='text-align:center' align='center' cellspacing='3'>");
+            out.println("<tr>");
+            out.println("<td width='32%'>Digite o valor do capital Inicial: <input type='text' name='c'></td>");
+            out.println("<td width='32%'>Digite o valor do juros por mês: <input type='text' name='j'></td>");
+            out.println("<td width='32%'>Digite a quantidade de meses: <input type='text' name='n'></td>");
+            out.println("<td width='3%'><input type='submit' name='calc' value='OK'/></td>");
+            out.println("</tr>");
+            out.println("</table>");
             out.println("</form>");
             out.println("<hr/>");
             
             if(request.getParameter("calc")!=null){
                 try{
-                    double c = Double.parseDouble(request.getParameter("c"));
-                    double j = Double.parseDouble(request.getParameter("j"));
-                    int n = Integer.parseInt(request.getParameter("n"));
+                    double capital = Double.parseDouble(request.getParameter("c"));
+                    double juros = Double.parseDouble(request.getParameter("j"));
+                    int quantidadeMeses = Integer.parseInt(request.getParameter("n"));
                     /*M = P . ( 1 + ( i . n ) )*/
-                    double m = c*(1+((j/100)*n));
-                    out.println("<h3>Capital: "+dinheiro.format(c)+"</h3>");
-                    out.println("<h3>Taxa de juros: "+j+"%</h3>");
-                    out.println("<h3>Periodo: "+n+" meses</h3>");                    
-                    out.println("<h3>O valor do montante no final do periodo: "+dinheiro.format(m)+"</h3>");
+                    double montante = capital*(1+((juros/100)*quantidadeMeses));
+                    out.println("<h3>Capital: "+dinheiro.format(capital)+"</h3>");
+                    out.println("<h3>Taxa de juros: "+juros+"%</h3>");
+                    out.println("<h3>Periodo: "+quantidadeMeses+" meses</h3>");                    
+                    out.println("<h3>O valor do montante no final do periodo: "+dinheiro.format(montante)+"</h3>");
+                    out.println("<hr/>");
                     
                 }catch(Exception ex){
                     out.println("<h1 style='color:red;'>Erro ao converter os campos</h1>");
+                    out.println("<hr/>");
                 }
             }
-            out.println("<hr/>");
-            out.println("<h3><a href='index.html'>Voltar</a></h3>");
             out.println("</body>");
             out.println("</html>");
         }
