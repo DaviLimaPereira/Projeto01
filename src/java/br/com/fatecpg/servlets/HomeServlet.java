@@ -54,7 +54,9 @@ public class HomeServlet extends HttpServlet {
             out.println("<h3>Integrantes:</h3>");
             out.println("<dl>");
             out.println("<dt><b>Daianne Aguiar</b></dt>");
-            out.println("<dd>descrição</dd><br>");
+            out.println("<dd> Formada em Técnico de Edificações pela ETEC São Vicente em 2010. <br>"
+                    + "Formada em Engenharia Civil pel Universidade Santa Cecilia em 2015. <br>"
+                    + "Atualmente cursando Análise e Desenvolvimento de Sistemas pela Fatec Praia Grande.</dd><br>");
             out.println("<dt><b>Davi Lima Pereira</b></dt>");
             out.println("<dd>Formado Técnico em Informatica pela ETEC Praia Grande em 2011. <br>");
             out.println("Atualmente cursando Analíse e Desenvolvimento de Sistemas pela Fatec Praia Grande.</dd><br>");
